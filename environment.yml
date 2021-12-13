@@ -1,0 +1,17 @@
+# conda env create --file environment.yml
+name: mlz_linreg
+channels:
+  - anaconda
+  - conda-forge
+  - defaults
+dependencies:
+  - fs
+  - jupyter
+  - jupyterlab
+  - pathlib
+  - pip
+  - pyprojroot
+  - python=3.8
+  - pip:
+    - pyhere
+    
