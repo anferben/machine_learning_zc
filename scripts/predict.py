@@ -3,16 +3,20 @@ from flask import Flask
 from flask import request
 from flask import jsonify
 
+# Loading the models
 
-output_file = f'model_C=1.0.bin'
+output_file = 'model_C=1.0.bin'
 
 with open(output_file, 'rb') as f_in:
     (dv, model) = pickle.load(f_in)
 
+
+# Creating the web service
+
 app = Flask('churn')
 
 
-def churn_desicion (customer):
+def churn_desicion(customer):
     X = dv.transform([customer])
     y_pred = model.predict_proba(X)[0, 1]
     churn = y_pred >= 0.5

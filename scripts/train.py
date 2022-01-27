@@ -64,7 +64,7 @@ categorical = ['gender', 'seniorcitizen', 'partner', 'dependents',
     'paperlessbilling', 'paymentmethod']
 
 
-# Training and validation
+# Model validation
 
 print(f'Validating the model with C = {C}')
 
